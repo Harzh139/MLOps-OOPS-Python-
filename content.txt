@@ -13,3 +13,8 @@
     > encapsulation
     > getter and setter
     > static method
+    > inheritance
+    > function vs method
+    > self
+    > dunder
+    > Can create attribute outside the class

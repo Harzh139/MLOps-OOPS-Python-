@@ -2,11 +2,12 @@
 class employee:
     #special function/method/dunder method -constructor
     def __init__(self):
-        print("Started data fetching....")
+        print(id(self))
+        #print("Started data fetching....")
         self.id = 123
         self.salary = 50000 
         self.designation = "software development engineer"
-        print("Data fetched!")
+       # print("Data fetched!")
 
     def travel(self,destination):
         print("This travel function was called manually")
@@ -14,8 +15,9 @@ class employee:
 
 #creating an object/instance of class employee
 sam = employee()
+print(id(sam))
 
 #print(sam.salary)
-sam.travel("Delhi")
+#sam.travel("Delhi")
 
-print(type(sam))
+#print(type(sam))
