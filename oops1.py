@@ -1,13 +1,23 @@
 #initiliaxe class
 class employee:
+
+    __user_id = 1
     #special function/method/dunder method -constructor
     def __init__(self):
         self.__name = "Default"
+        self.id = employee.__user_id
+        employee.__user_id += 1
         #print("Started data fetching....")
-        self.id = 123
+        
         self.salary = 50000 
         self.designation = "software development engineer"
        # print("Data fetched!")
+    @staticmethod
+    def get_id():
+        return employee.__user_id
+    
+    def set_id(value):
+        employee.__user_id = value
 
     def get_name(self):
         return self.__name
@@ -28,6 +38,13 @@ class employee:
 
 #print(type(sam))
 user1 = employee()
-print(user1.get_name())
-user1.set_name("Agent X")
-print(user1.get_name())
+print(user1.id)
+
+employee.set_id(10)
+#user1.set_name("Agent X")
+#print(user1.get_name())
+user2 = employee()
+print(user2.id)
+
+user3 = employee()
+print(user3.id)
